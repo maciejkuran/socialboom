@@ -1,5 +1,7 @@
+import SecondaryButton from './components/UI/SecondaryButton';
+
 function App() {
-  return <h1>Hello</h1>;
+  return <SecondaryButton>Add profile image</SecondaryButton>;
 }
 
 export default App;

@@ -1,0 +1,14 @@
+.secondary-button {
+  background: linear-gradient(91.02deg, #20ebae 5.7%, #7f95eb 85.44%, #94bfff 105.77%);
+  border-radius: 35px;
+  color: white;
+  font-weight: 700;
+  padding: 1.3rem 2rem;
+  filter: drop-shadow(0px 4px 4px rgba(201, 199, 199, 0.25));
+  min-width: 100%;
+}
+
+.secondary-button:hover {
+  transition: 500ms;
+  color: var(--color-secondary);
+}

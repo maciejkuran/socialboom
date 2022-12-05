@@ -38,3 +38,8 @@ a,
 button {
   font-size: 1.7rem;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+}
