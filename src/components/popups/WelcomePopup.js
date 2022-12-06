@@ -1,7 +1,6 @@
 import classes from './WelcomePopup.module.css';
 import Card from '../UI/Card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import CloseButton from '../UI/CloseButton';
 
 const WelcomePopup = () => {
   return (
@@ -12,9 +11,7 @@ const WelcomePopup = () => {
           Connect your thoughts with other users.<br></br>
           Share now what's on your 🧠 . Make your first BOOM!
         </p>
-        <button className={classes['welcome__button--close']}>
-          <FontAwesomeIcon icon={faXmark} />
-        </button>
+        <CloseButton />
       </Card>
     </div>
   );

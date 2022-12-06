@@ -8,13 +8,6 @@
   margin: auto;
 }
 
-.welcome__button--close {
-  position: absolute;
-  top: 6%;
-  right: 3%;
-  padding: 0.5rem 1rem;
-}
-
 svg {
   font-size: 2rem;
 }

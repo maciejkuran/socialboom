@@ -36,7 +36,8 @@ h6 {
 p,
 input,
 a,
-button {
+button,
+textarea {
   font-size: 1.7rem;
 }
 
@@ -52,10 +53,12 @@ button:hover {
   background-color: var(--color-secondary);
 }
 
-input {
+input,
+textarea {
   padding: 1rem 2rem;
   outline: none;
   border: none;
   background-color: var(--color-secondary);
   border-radius: 35px;
+  font-family: 'Poppins', sans-serif;
 }
