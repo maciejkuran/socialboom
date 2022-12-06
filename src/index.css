@@ -16,7 +16,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0 1rem;
 }
 
 h1,
@@ -44,6 +43,13 @@ button {
 button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
+  outline: none;
+  border-radius: 35px;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
 }
 
 input {

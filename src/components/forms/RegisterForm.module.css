@@ -7,6 +7,7 @@
 .register {
   max-width: 60rem;
   position: relative;
+  margin: 0 1rem;
 }
 
 .register__boomGraphic {
@@ -71,7 +72,7 @@
   margin-left: 1rem;
 }
 
-.register__input--file--label:hover {
+.register__form__input--file--label:hover {
   color: var(--color-secondary);
 }
 
