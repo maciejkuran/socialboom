@@ -3,14 +3,16 @@
 import RegisterForm from './components/forms/RegisterForm';
 import Navbar from './components/navbar/Navbar';
 import WelcomePopup from './components/popups/WelcomePopup';
+import UserInfobar from './components/user/UserInfobar';
 
 function App() {
   // return <FontAwesomeIcon style={{ fontSize: '50px' }} icon={faHouseUser} />;
   return (
     <div>
-      <Navbar></Navbar>
-      <WelcomePopup></WelcomePopup>
-      <RegisterForm></RegisterForm>
+      <Navbar />
+      <WelcomePopup />
+      <UserInfobar />
+      <RegisterForm />
     </div>
   );
 }

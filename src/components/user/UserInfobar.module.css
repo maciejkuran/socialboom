@@ -1,0 +1,83 @@
+.container {
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+
+.infobar {
+  max-width: 69rem;
+  display: flex;
+  margin: auto;
+}
+
+.infobar img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(91.02deg, #fba6f2 5.7%, #7f95eb 85.44%, #94bfff 105.77%) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
+
+.infobar__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.infobar__left span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d0d0d0;
+  margin-top: 0.5rem;
+}
+
+.infobar__right {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+.infobar__right h1 {
+  white-space: pre-line;
+}
+
+.infobar__right__country {
+  color: #7f95eb;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.infobar__right__stats {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.infobar__right__stats div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.infobar__right__stats__number {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.infobar__right__stats__label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #a6a6a6;
+}
+
+@media (max-width: 565.98px) {
+  .infobar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infobar__right__stats div {
+    margin-right: 2rem;
+  }
+}
