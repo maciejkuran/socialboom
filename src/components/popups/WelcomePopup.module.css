@@ -1,0 +1,20 @@
+.container {
+  margin: 2rem 1rem;
+}
+
+.welcome {
+  max-width: 90rem;
+  background: linear-gradient(91.02deg, #fba6f2 5.7%, #7f95eb 85.44%, #94bfff 105.77%);
+  margin: auto;
+}
+
+.welcome__button--close {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  padding: 0.5rem 1rem;
+}
+
+svg {
+  font-size: 2rem;
+}
