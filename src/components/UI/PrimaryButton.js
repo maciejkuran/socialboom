@@ -2,7 +2,12 @@ import classes from './PrimaryButton.module.css';
 
 const PrimaryButton = props => {
   return (
-    <button className={`${classes['primary-button']} ${props.className}`}>{props.children}</button>
+    <button
+      type={props.type || 'button'}
+      className={`${classes['primary-button']} ${props.className}`}
+    >
+      {props.children}
+    </button>
   );
 };
 
