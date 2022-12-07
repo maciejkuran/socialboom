@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import barca from '../../img/barca.jpg';
 import SecondaryButton from '../UI/SecondaryButton';
 import CloseButton from '../UI/CloseButton';
+import BackgroundOverlay from '../UI/BackgroundOverlay';
 
 const AddPost = () => {
   return (
@@ -34,7 +35,7 @@ const AddPost = () => {
         </SecondaryButton>
         <CloseButton />
       </Card>
-      <div className={classes['add-post__background-overlay']}></div>
+      <BackgroundOverlay />
     </div>
   );
 };

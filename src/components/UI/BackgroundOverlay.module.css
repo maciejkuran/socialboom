@@ -1,0 +1,9 @@
+.background-overlay {
+  background-color: rgba(211, 211, 211, 0.56);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}

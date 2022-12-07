@@ -1,0 +1,14 @@
+.demo-notice {
+  max-width: 60rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+
+@media (max-width: 900.98px) {
+  .demo-notice {
+    width: 80%;
+  }
+}
