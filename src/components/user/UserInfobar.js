@@ -1,14 +1,14 @@
 import classes from './UserInfobar.module.css';
 import Card from '../UI/Card';
 import PrimaryButton from '../UI/PrimaryButton';
-import profileImg from '../../img/maciej kuran.jpg';
+import profilePlaceholder from '../../img/user-placeholder.png';
 
 const UserInfobar = () => {
   return (
     <div className={classes.container}>
       <Card className={classes.infobar}>
         <div className={classes['infobar__left']}>
-          <img src={profileImg}></img>
+          <img src={profilePlaceholder}></img>
           <span>maciejkuran</span>
         </div>
         <div className={classes['infobar__right']}>
