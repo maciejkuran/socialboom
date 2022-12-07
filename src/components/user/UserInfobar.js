@@ -1,19 +1,31 @@
 import classes from './UserInfobar.module.css';
 import Card from '../UI/Card';
 import PrimaryButton from '../UI/PrimaryButton';
-import profilePlaceholder from '../../img/user-placeholder.png';
+import imgPlaceholder from '../../img/user-placeholder.png';
+import AddPost from '../forms/AddPost';
+import { useState } from 'react';
 
-const UserInfobar = () => {
+const UserInfobar = props => {
+  const [addPostForm, setAddPostForm] = useState(false);
+
+  const showAddPostFormHandler = () => {
+    setAddPostForm(true);
+  };
+
   return (
     <div className={classes.container}>
       <Card className={classes.infobar}>
         <div className={classes['infobar__left']}>
-          <img src={profilePlaceholder}></img>
-          <span>maciejkuran</span>
+          {props.userData.profileImage === '' ? (
+            <img src={imgPlaceholder}></img>
+          ) : (
+            <img src={props.userData.profileImage}></img>
+          )}
+          <span>{props.userData.username}</span>
         </div>
         <div className={classes['infobar__right']}>
-          <h1>Maciej Kuran-Janowski</h1>
-          <span className={classes['infobar__right__country']}>Poland</span>
+          <h1>{`${props.userData.name} ${props.userData.lastName}`}</h1>
+          <span className={classes['infobar__right__country']}>{props.userData.country}</span>
           <div className={classes['infobar__right__stats']}>
             <div>
               <span className={classes['infobar__right__stats__number']}>0</span>
@@ -28,9 +40,11 @@ const UserInfobar = () => {
               <span className={classes['infobar__right__stats__label']}>Following</span>
             </div>
           </div>
-          <PrimaryButton>Make Boom! 💣</PrimaryButton>
+          <PrimaryButton onClick={showAddPostFormHandler}>Make Boom! 💣</PrimaryButton>
         </div>
       </Card>
+
+      {addPostForm && <AddPost setAddPostForm={setAddPostForm} />}
     </div>
   );
 };

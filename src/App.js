@@ -6,14 +6,18 @@ function App() {
   const [registered, setRegistered] = useState(false);
   const [userData, setUserData] = useState('');
 
-  const getUserData = data => {
+  const getUserDataOnSubmitForm = data => {
     setUserData(data);
+    setRegistered(true);
+
+    console.log(data);
   };
 
   return (
     <div>
-      <UserAccount />
-      <RegisterForm onSubmitData={getUserData} />
+      {registered && <UserAccount userData={userData} />}
+
+      {!registered && <RegisterForm onSubmitData={getUserDataOnSubmitForm} />}
     </div>
   );
 }

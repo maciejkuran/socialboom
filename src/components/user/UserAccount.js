@@ -5,13 +5,12 @@ import AddPost from '../forms/AddPost';
 import UserPostList from './UserPostList';
 import DemoNotice from '../popups/DemoNotice';
 
-const UserAccount = () => {
+const UserAccount = props => {
   return (
     <div>
       <Navbar />
-      <WelcomePopup />
-      <UserInfobar />
-      {/* <AddPost /> */}
+      <WelcomePopup userData={props.userData} />
+      <UserInfobar userData={props.userData} />
       <UserPostList />
       {/* <DemoNotice /> */}
     </div>

@@ -2,7 +2,6 @@ import classes from './RegisterForm.module.css';
 import Card from '../UI/Card';
 import logo from '../../img/socialboom logo.png';
 import SecondaryButton from '../UI/SecondaryButton';
-import barca from '../../img/barca.jpg';
 import boomGraphic from '../../img/boom.png';
 import { useState } from 'react';
 
@@ -12,23 +11,44 @@ const RegisterForm = props => {
     lastName: '',
     country: '',
     profileImage: '',
+    username: '',
   });
 
   const getNameHandler = e => {
     setForm(prev => {
-      return { ...prev, name: e.target.value };
+      return {
+        ...prev,
+        name: e.target.value.trim(),
+      };
     });
   };
 
   const getLastNameHandler = e => {
     setForm(prev => {
-      return { ...prev, lastName: e.target.value };
+      return {
+        ...prev,
+        lastName: e.target.value.trim(),
+      };
     });
+
+    createUsername();
   };
 
   const getCountryHandler = e => {
     setForm(prev => {
       return { ...prev, country: e.target.value };
+    });
+  };
+
+  const createUsername = () => {
+    setForm(prev => {
+      return {
+        ...prev,
+        username: `${getForm.name.toLowerCase()}${getForm.lastName
+          .slice(0, 6)
+          .toLowerCase()
+          .trim()}`,
+      };
     });
   };
 
@@ -45,6 +65,7 @@ const RegisterForm = props => {
 
   const submitFormHandler = e => {
     e.preventDefault();
+
     props.onSubmitData(getForm);
   };
 
@@ -85,7 +106,15 @@ const RegisterForm = props => {
             type="file"
             accept="image/png, image/jpeg"
           ></input>
-          <img className={classes['register__form__input--file--output-img']} src={barca}></img>
+          {getForm.profileImage !== '' ? (
+            <img
+              className={classes['register__form__input--file--output-img']}
+              src={getForm.profileImage}
+            ></img>
+          ) : (
+            ''
+          )}
+
           <SecondaryButton type="submit" className={classes['register__form__submit-btn']}>
             READY!
           </SecondaryButton>

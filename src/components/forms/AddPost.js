@@ -5,7 +5,11 @@ import SecondaryButton from '../UI/SecondaryButton';
 import CloseButton from '../UI/CloseButton';
 import BackgroundOverlay from '../UI/BackgroundOverlay';
 
-const AddPost = () => {
+const AddPost = props => {
+  const hideAddPostFormHandler = () => {
+    props.setAddPostForm(false);
+  };
+
   return (
     <div>
       <Card className={classes['add-post']}>
@@ -33,9 +37,9 @@ const AddPost = () => {
         <SecondaryButton type="submit" className={classes['register__form__submit-btn']}>
           READY!
         </SecondaryButton>
-        <CloseButton />
+        <CloseButton onClick={hideAddPostFormHandler} />
       </Card>
-      <BackgroundOverlay />
+      <BackgroundOverlay onClick={hideAddPostFormHandler} />
     </div>
   );
 };

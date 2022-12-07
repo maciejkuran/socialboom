@@ -66,9 +66,10 @@
 }
 
 .register__form__input--file--output-img {
-  max-width: 6rem;
-  height: fit-content;
-  border-radius: 35px;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
   margin-left: 1rem;
 }
 
