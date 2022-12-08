@@ -48,6 +48,7 @@ button {
   background-color: transparent;
   outline: none;
   border-radius: 35px;
+  color: var(--color-primary);
 }
 
 button:hover {
