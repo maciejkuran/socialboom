@@ -41,13 +41,17 @@ const RegisterForm = props => {
   };
 
   const createUsername = () => {
+    const randomNb = (min, max) => {
+      return Math.trunc(Math.random() * (max - min + 1) + min);
+    };
+
     setForm(prev => {
       return {
         ...prev,
         username: `${getForm.name.toLowerCase()}${getForm.lastName
-          .slice(0, 6)
+          .slice(0, 5)
           .toLowerCase()
-          .trim()}`,
+          .trim()}${randomNb(10, 99)}`,
       };
     });
   };
@@ -76,21 +80,26 @@ const RegisterForm = props => {
         <div className={classes['register__brand-logo']}>
           <img className={classes['register__brand-logo--img']} src={logo}></img>
         </div>
-        <h3>Fake registration!</h3>
-        <p>Feel free to input random values</p>
+        <h3>Fake Sign up!</h3>
+        <p>This data is not processed anywhere.</p>
         <form onSubmit={submitFormHandler} className={classes['register__form']}>
           <div className={classes['register__form__wrapper']}>
-            <input onChange={getNameHandler} placeholder="Name" type="text"></input>
+            <input onChange={getNameHandler} placeholder="Name" type="text" required></input>
             <label>*</label>
           </div>
 
           <div className={classes['register__form__wrapper']}>
-            <input onChange={getLastNameHandler} placeholder="Last Name" type="text"></input>
+            <input
+              onChange={getLastNameHandler}
+              placeholder="Last Name"
+              type="text"
+              required
+            ></input>
             <label>*</label>
           </div>
 
           <div className={classes['register__form__wrapper']}>
-            <input onChange={getCountryHandler} placeholder="Country" type="text"></input>
+            <input onChange={getCountryHandler} placeholder="Country" type="text" required></input>
             <label>*</label>
           </div>
 

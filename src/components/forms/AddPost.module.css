@@ -24,11 +24,11 @@ textarea {
   align-items: center;
 }
 
-#register__form__input--file {
+#add-post__input--file {
   display: none;
 }
 
-.register__form__input--file--label {
+.add-post__input--file--label {
   cursor: pointer;
   background: linear-gradient(91.02deg, #fba6f2 5.7%, #7f95eb 85.44%, #94bfff 105.77%);
   color: white;
@@ -39,18 +39,18 @@ textarea {
   height: fit-content;
 }
 
-.register__form__input--file--output-img {
+.add-post__input--file--label:hover {
+  color: var(--color-secondary);
+}
+
+.add-post__input--file--output-img {
   max-width: 6rem;
   height: fit-content;
   border-radius: 35px;
   margin-left: 1rem;
 }
 
-.register__form__input--file--label:hover {
-  color: var(--color-secondary);
-}
-
-.register__form__submit-btn {
+.add-post__submit-btn {
   margin-top: 3rem;
 }
 

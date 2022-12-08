@@ -12,6 +12,10 @@ const UserInfobar = props => {
     setAddPostForm(true);
   };
 
+  const submitedPostData = data => {
+    props.onSubmitGetPostData(data);
+  };
+
   return (
     <div className={classes.container}>
       <Card className={classes.infobar}>
@@ -28,7 +32,9 @@ const UserInfobar = props => {
           <span className={classes['infobar__right__country']}>{props.userData.country}</span>
           <div className={classes['infobar__right__stats']}>
             <div>
-              <span className={classes['infobar__right__stats__number']}>0</span>
+              <span className={classes['infobar__right__stats__number']}>
+                {props.postList.length}
+              </span>
               <span className={classes['infobar__right__stats__label']}>Boom</span>
             </div>
             <div>
@@ -44,7 +50,9 @@ const UserInfobar = props => {
         </div>
       </Card>
 
-      {addPostForm && <AddPost setAddPostForm={setAddPostForm} />}
+      {addPostForm && (
+        <AddPost onSubmitGetPostData={submitedPostData} setAddPostForm={setAddPostForm} />
+      )}
     </div>
   );
 };

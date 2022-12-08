@@ -9,8 +9,6 @@ function App() {
   const getUserDataOnSubmitForm = data => {
     setUserData(data);
     setRegistered(true);
-
-    console.log(data);
   };
 
   return (
