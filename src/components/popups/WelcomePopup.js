@@ -17,7 +17,7 @@ const WelcomePopup = props => {
           <h3>Welcome to socialboom {props.userData.name} 👋!</h3>
           <p>
             Connect your thoughts with other users.<br></br>
-            Share now what's on your 🧠 . Make your first BOOM!
+            Share now what's on your 🧠. Make your first BOOM!
           </p>
           <CloseButton onClick={closePopupHandler} />
         </Card>

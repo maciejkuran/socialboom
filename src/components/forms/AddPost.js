@@ -73,6 +73,7 @@ const AddPost = props => {
               onChange={getContentHandler}
               rows="2"
               placeholder="What's on your mind?"
+              required
             ></textarea>
           </div>
           <div className={classes['add-post__wrapper']}>
@@ -80,6 +81,7 @@ const AddPost = props => {
               onChange={getTagsHandler}
               type="text"
               placeholder="#seperate #tags #with #space"
+              required
             ></input>
           </div>
           <div className={classes['add-post__align']}>
