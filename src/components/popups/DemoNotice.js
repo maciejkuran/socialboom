@@ -23,13 +23,3 @@ const DemoNotice = props => {
 };
 
 export default DemoNotice;
-
-{
-  /* <Fragment>
-      <Card className={classes['demo-notice']}>
-        <h3>Sorry, it's a demo version! This feature is not available. 👀</h3>
-        <CloseButton onClick={hideDemoNoticePopupHandler} />
-      </Card>
-      <BackgroundOverlay onClick={hideDemoNoticePopupHandler} />
-    </Fragment> */
-}
