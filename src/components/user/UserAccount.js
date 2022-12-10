@@ -2,7 +2,7 @@ import Navbar from '../navbar/Navbar';
 import WelcomePopup from '../popups/WelcomePopup';
 import UserInfobar from '../user/UserInfobar';
 import UserPostList from './UserPostList';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 
 const UserAccount = props => {
   const [postList, setPostList] = useState([]);
@@ -12,7 +12,7 @@ const UserAccount = props => {
   };
 
   return (
-    <div>
+    <Fragment>
       <Navbar />
       <WelcomePopup userData={props.userData} />
       <UserInfobar
@@ -21,7 +21,7 @@ const UserAccount = props => {
         userData={props.userData}
       />
       <UserPostList userData={props.userData} postList={postList} />
-    </div>
+    </Fragment>
   );
 };
 

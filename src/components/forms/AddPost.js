@@ -3,7 +3,7 @@ import Card from '../UI/Card';
 import SecondaryButton from '../UI/SecondaryButton';
 import CloseButton from '../UI/CloseButton';
 import BackgroundOverlay from '../UI/BackgroundOverlay';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 
 const AddPost = props => {
   const generateDate = () => {
@@ -63,7 +63,7 @@ const AddPost = props => {
   };
 
   return (
-    <div>
+    <Fragment>
       <Card className={classes['add-post']}>
         <h3>Make a boom! 💣</h3>
 
@@ -110,7 +110,7 @@ const AddPost = props => {
         <CloseButton onClick={hideAddPostFormHandler} />
       </Card>
       <BackgroundOverlay onClick={hideAddPostFormHandler} />
-    </div>
+    </Fragment>
   );
 };
 

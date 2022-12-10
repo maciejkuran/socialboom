@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faComment, faGear, faBurger } from '@fortawesome/free-solid-svg-icons';
 import DemoNotice from '../popups/DemoNotice';
 
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <Fragment>
       <nav className={classes.nav}>
         <div className={classes['nav__wrapper']}>
           <div className={classes['nav__wrapper__internal']}>
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
       </nav>
       {demoNoticePopup && <DemoNotice setDemoNoticePopup={setDemoNoticePopup} />}
-    </div>
+    </Fragment>
   );
 };
 

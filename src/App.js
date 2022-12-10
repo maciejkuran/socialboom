@@ -1,6 +1,6 @@
 import RegisterForm from './components/forms/RegisterForm';
 import UserAccount from './components/user/UserAccount';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 
 function App() {
   const [registered, setRegistered] = useState(false);
@@ -12,11 +12,11 @@ function App() {
   };
 
   return (
-    <div>
+    <Fragment>
       {registered && <UserAccount userData={userData} />}
 
       {!registered && <RegisterForm onSubmitData={getUserDataOnSubmitForm} />}
-    </div>
+    </Fragment>
   );
 }
 
