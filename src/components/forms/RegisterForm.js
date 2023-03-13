@@ -114,6 +114,7 @@ const RegisterForm = props => {
             id={classes['register__form__input--file']}
             type="file"
             accept="image/png, image/jpeg"
+            placeholder="image"
           ></input>
           {getForm.profileImage !== '' ? (
             <img
