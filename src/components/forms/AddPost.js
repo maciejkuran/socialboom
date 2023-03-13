@@ -70,6 +70,7 @@ const AddPost = props => {
         <form onSubmit={submitPostHandler}>
           <div className={classes['add-post__wrapper']}>
             <textarea
+              aria-label="description"
               onChange={getContentHandler}
               rows="2"
               placeholder="What's on your mind?"
@@ -96,6 +97,7 @@ const AddPost = props => {
               id={classes['add-post__input--file']}
               type="file"
               accept="image/png, image/jpeg"
+              placeholder="image"
             ></input>
             {post.image !== '' ? (
               <img className={classes['add-post__input--file--output-img']} src={post.image}></img>
