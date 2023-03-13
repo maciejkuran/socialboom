@@ -22,6 +22,8 @@ I implemented:
 - user info bar
 - new post form and rendering post (date, content, tags, and image)
 
+* completed unit tests
+
 ## UI Design
 
 <p align="center"><img src="/src/img/socialboom ui.jpg"></p>
