@@ -22,7 +22,8 @@ I implemented:
 - user info bar
 - new post form and rendering post (date, content, tags, and image)
 
-* completed unit tests
+_____________________________
+- completed unit tests
 
 ## UI Design
 
